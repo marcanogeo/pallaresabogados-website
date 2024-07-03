@@ -1,0 +1,17 @@
+---
+import Imag from './imag.astro';
+const {url, description, title, text} = Astro.props;
+interface Props {
+    url: string;
+    description: string;
+    title: string;
+    text:string;
+}
+---
+<section class="md:container md:mx-2 sm:mx-2">
+   <Imag url={url} description={description}/>
+    <div>
+        <h2>{title}</h2>
+        <p>{text}</p>
+    </div>
+</section>
