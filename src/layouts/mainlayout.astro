@@ -2,7 +2,7 @@
 
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/footer.astro";
-
+const {title} = Astro.props;
 ---
 
 <html lang="es">
@@ -11,7 +11,7 @@ import Footer from "../components/footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Pallares Abogados</title>
+    <title>{title}</title>
 </head>
 <body>
 <Navbar />

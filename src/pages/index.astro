@@ -4,22 +4,22 @@ import Sections from '../components/sections.astro';
 import Imag from "../components/imag.astro";
 import Mainlayout from "../layouts/mainlayout.astro";
 ---
-<Mainlayout title="Inicio" url="/" text="Inicio">
-    <div class="bg-orange-50">
+<Mainlayout title="Inicio">
+    <div class="flex-auto">
         <Banner>
             <Imag url="/images/1.jpg" description="Pallares Abogados"/>
             <span>Somos sus abogados de confianza</span>
             <span>¡Contáctenos!</span>
         </Banner>
         <Sections>
-            <Imag url="/images/3.jpg"
+            <Imag url="src/images/3.jpg"
                   description="Nosotros Pallares Abogados"
                   width="200"
                   height="200"
             />
             <div>
                 <h2>title="Quiénes somos"</h2>
-                <p>text=""</p>
+                <p>text="En Pallares Abogados, contamos con un equipo de abogados altamente cualificados y con una amplia experiencia en diversas áreas del derecho. Nuestros profesionales están comprometidos con el estudio continuo y la capacitación para asegurar que estamos siempre al día con los últimos desarrollos legales y judiciales."</p>
             </div>
         </Sections>
     </div>
