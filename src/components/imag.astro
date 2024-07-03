@@ -1,8 +1,10 @@
 ---
-const {url,description} = Astro.props;
+const {url,description, width,height} = Astro.props;
 interface props{
     url: string;
     description: string;
+    width: string;
+    height: string;
 }
 ---
-<img src={url} alt={description}/>
+<img src={url} alt={description} width={width} height={height} />
