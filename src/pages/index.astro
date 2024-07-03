@@ -1,18 +1,21 @@
 ---
 import Banner from '../components/banner.astro';
 import Sections from '../components/sections.astro';
-import Imgs from "../components/imag.astro";
+import Imag from "../components/imag.astro";
 import Mainlayout from "../layouts/mainlayout.astro";
 ---
 <Mainlayout title="Inicio" url="/" text="Inicio">
- <Banner />
+<Banner>
+  <Imag url="/images/1.jpg" description="Pallares Abogados"/>
+  <span>Somos sus abogados de confianza</span>
+  <span>¡Contáctenos!</span>
+</Banner>
  <Sections>
-  <Imgs url="/images/3.jpg" description="Nosotros Pallares Abogados"/>
+  <Imag url="/images/3.jpg" description="Nosotros Pallares Abogados"/>
   <div>
    <h2>title="Quiénes somos"</h2>
    <p>text=""</p>
   </div>
  </Sections>
-
 </Mainlayout>
 
