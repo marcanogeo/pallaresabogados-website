@@ -1,0 +1,9 @@
+---
+const {text} = Astro.props;
+interface Props {
+    text:string;
+}
+---
+<div class="flex flex-col text-justify text-xl font-normal leading p-4">
+    <p>{text}</p>
+</div>
