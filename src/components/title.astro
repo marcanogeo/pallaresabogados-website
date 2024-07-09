@@ -1,0 +1,9 @@
+---
+const {text}=Astro.props;
+interface Props {
+    text: string;
+}
+---
+<div class="text-center sm:text-sm md:text-2xl text-semibold mx-auto p-4">
+    <h2>{text}</h2>
+</div>

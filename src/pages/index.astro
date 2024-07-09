@@ -2,22 +2,33 @@
 import Banner from '../components/banner.astro';
 import Sections from '../components/sections.astro';
 import Imag from '../components/imag.astro';
-import Mainlayout from '../layouts/mainlayout.astro';
+import Title from '../components/title.astro';
+import Layout from '../layouts/mainlayout.astro';
 ---
-<Mainlayout title="Inicio">
+<Layout title="Inicio">
     <main>
         <Banner/>
-        <Sections>
-            <Imag url="/src/images/3.jpg"
-                  description="Nosotros Pallares Abogados"
+        <div>
+            <Title
+                text = "Especialidades"
             />
-                title="Quiénes somos"
-                text="En Pallares Abogados, contamos con un equipo de abogados
-                    altamente cualificados y con una amplia experiencia en diversas
-                    áreas del derecho. Nuestros profesionales están comprometidos con el
-                    estudio continuo y la capacitación para asegurar que estamos siempre
-                    al día con los últimos desarrollos legales y judiciales."
-        </Sections>
-    </main>
-</Mainlayout>
+            <div class="flex px-4 mx-auto w-full shrink">
+                <div class="w-1/2 p-4 basis-1/2">
+                    <Imag url="/src/images/3.jpg" text="Nosotros" class="md:w-auto md:h-auto rounded-xl"/>
+                    <Sections
+                            title="Quienes somos"
+                            text="Hola"
+                    />
+                </div>
+                <div class="w-1/2 p-4 basis-1/2">
+                    <Imag url="/src/images/3.jpg" text="Nosotros" class="md:w-auto md:h-auto rounded-xl"/>
+                    <Sections
+                            title="Quienes somos"
+                            text="Hola"
+                    />
+                </div>
+            </div>
+        </div>
 
+    </main>
+</Layout>

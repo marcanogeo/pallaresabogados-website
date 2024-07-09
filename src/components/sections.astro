@@ -1,17 +1,13 @@
 ---
-import Imag from './imag.astro';
-const {url, description, title, text} = Astro.props;
-interface Props {
-    url: string;
-    description: string;
+const {title,text} = Astro.props;
+interface Props{
     title: string;
-    text:string;
+    text: string;
 }
 ---
-<section class="md:container md:mx-2 sm:mx-2">
-   <Imag url={url} description={description}/>
-    <div>
-        <h2>{title}</h2>
-        <p>{text}</p>
-    </div>
+<section>
+    <h3 class="container mx-auto p-4">{title}</h3>
+    <p class="flex justify-around">
+        {text}
+    </p>
 </section>
