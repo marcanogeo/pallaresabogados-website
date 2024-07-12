@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports =  {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		screens:{
@@ -7,7 +7,7 @@ export default {
 			md: '768px',
 			lg: '1024px',
 			xl: '1440px',
-			xxl: '1920px'
+			'2xl': '1920px'
 		},
 		colors: {
 			'blue': '#1fb6ff',
@@ -24,7 +24,16 @@ export default {
 			sans: ['Graphik', 'sans-serif'],
 			serif: ['Lato', 'serif'],
 		},
+		container: {
+			padding: {
+				DEFAULT: '1rem',
+				sm: '2rem',
+				lg: '4rem',
+				xl: '5rem',
+				'2xl': '6rem',
+			},
+		},
 		extend: {},
 	},
 	plugins: [],
-}
+};
