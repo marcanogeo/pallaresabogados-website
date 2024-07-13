@@ -2,23 +2,40 @@
 import Banner from '../components/banner.astro';
 import Art from '../components/art.astro';
 import Title from '../components/title.astro';
+import Subtitle from '../components/subtitle.astro';
 import Layout from '../layouts/mainlayout.astro';
 import Imground from '../components/imgrounded.astro';
 ---
 <Layout title="Inicio">
     <main>
         <Banner/>
-        <div class="container mx-auto p-12">
+        <div class="flex flex-col mx-auto md:w-10/12 sm:p-4 md:p-12">
             <Title
                 text = "Nosotros"
             />
             <div class="flex-col sm:px-2 sm:py-4 mx-auto w-75 shrink">
-                    <Imground  url='/images/2.jpg' text="Nosotros" />
+                    <Imground  url='/images/2.jpg' text="Nosotros" width={1200} height={920} />
                     <Art
-                            title="Quienes somos"
                             text="En Pallares Pereira Abogados, contamos con un equipo de abogados altamente cualificados y con amplia experiencia en diversas áreas del derecho. Nuestros profesionales están comprometidos con el estudio continuo y la capacitación para asegurar que estamos siempre al día con los últimos desarrollos legales y judiciales."
                     />
 
+            </div>
+            <Title
+                text ="Especialidades"
+                />
+            <div class="md:flex lg:columns-2 column-1 gap-8 sm:p-4 md:p-12 mx-auto shrink">
+                <div class="w-1/2 md:w-full mx-auto text-center text-2xl">
+                    <Imground url='/images/3.jpg' text="Penal" width={600} height={400} />
+                    <Subtitle
+                            text="Derecho Penal"
+                    />
+                </div>
+                <div class="w-1/2 md:w-full mx-auto text-center text-2xl">
+                    <Imground url='/images/6.jpg' text="Civil" width={600} height={400} />
+                    <Subtitle
+                            text="Derecho Civil"
+                    />
+                </div>
             </div>
         </div>
 

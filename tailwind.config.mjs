@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports =  {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		"./src/**/*.{html,js}",
+		"./node_modules/tw-elements/js/**/*.js"
+	],
+	plugins: [require("tw-elements/plugin.cjs")],
+	darkMode: "class",
 	theme: {
 		screens:{
 			sm: '480px',
@@ -14,11 +19,14 @@ module.exports =  {
 			'purple': '#7e5bef',
 			'pink': '#ff49db',
 			'orange': '#ff7849',
-			'green': '#13ce66',
+			'green': '#003940',
 			'yellow': '#ffc82c',
 			'gray-dark': '#273444',
 			'gray': '#8492a6',
 			'gray-light': '#d3dce6',
+			'bronze': '#D6945C',
+			'light-gold': '#C29A6B',
+			'golden': '#AA8E7B'
 		},
 		fontFamily: {
 			sans: ['Graphik', 'sans-serif'],
@@ -35,5 +43,4 @@ module.exports =  {
 		},
 		extend: {},
 	},
-	plugins: [],
 };
