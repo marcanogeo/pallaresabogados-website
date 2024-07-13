@@ -29,8 +29,8 @@ module.exports =  {
 			'golden': '#AA8E7B'
 		},
 		fontFamily: {
-			sans: ['Graphik', 'sans-serif'],
-			serif: ['Lato', 'serif'],
+			sans: ['PT Sans','Noto Sans', 'sans-serif'],
+			serif: ['PT_Serif', 'Lato', 'serif'],
 		},
 		container: {
 			padding: {
