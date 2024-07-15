@@ -4,7 +4,10 @@ module.exports =  {
 		"./src/**/*.{html,js}",
 		"./node_modules/tw-elements/js/**/*.js"
 	],
-	plugins: [require("tw-elements/plugin.cjs")],
+	plugins: [
+		require('tw-elements/plugin.cjs'),
+		require('@tailwindcss/forms')
+	],
 	darkMode: "class",
 	theme: {
 		screens:{
@@ -30,7 +33,7 @@ module.exports =  {
 		},
 		fontFamily: {
 			sans: ['PT Sans','Noto Sans', 'sans-serif'],
-			serif: ['PT_Serif', 'Lato', 'serif'],
+			serif: ['PT Serif', 'Lato', 'serif'],
 		},
 		container: {
 			padding: {
