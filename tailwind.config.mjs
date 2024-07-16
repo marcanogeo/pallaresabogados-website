@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports =  {
+const withMT = require("@material-tailwind/html/utils/withMT");
+module.exports = withMT( {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
 		"./src/**/*.{html,js}",
 		"./node_modules/tw-elements/js/**/*.js"
@@ -34,6 +35,7 @@ module.exports =  {
 		fontFamily: {
 			sans: ['PT Sans','Noto Sans', 'sans-serif'],
 			serif: ['PT Serif', 'Lato', 'serif'],
+			script: ['Marck Script', 'cursive'],
 		},
 		container: {
 			padding: {
@@ -46,4 +48,4 @@ module.exports =  {
 		},
 		extend: {},
 	},
-};
+});
