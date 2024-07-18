@@ -1,7 +1,11 @@
 ---
-
+const  { url, description} = Astro.props;
+interface props {
+    url: string;
+    description: string;
+}
 ---
 <figure class="relative transition-all duration-300 cursor-pointer mb-4">
-    <img src="/images/1.jpg" alt="Pallares Abogados" class="lg:w-full sm:w-50 max-h-auto sm:h-auto"/>
+    <img src={url} alt={description} class="lg:w-full sm:w-50 max-h-auto sm:h-auto"/>
 </figure>
 
