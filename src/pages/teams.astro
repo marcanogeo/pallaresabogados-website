@@ -1,0 +1,58 @@
+---
+import Banner from "../components/banner.astro";
+import Layout from "../layouts/mainlayout.astro";
+---
+
+<Layout title="Inicio">
+    <main>
+        <Banner
+                url='/images/9.jpg'
+                description="Equipo Legal Pallares Abogados"
+        />
+        <div class="flex-col justify-around items-center px-12 mx-auto w1/3 md:w1/2">
+            <section class="mb-6">
+                <h6 class="mx-auto text-xl mb-4 text-green font-medium">
+                    Nuestro Equipo
+                </h6>
+                <p class="indent-8 mb-6 md:mb-0">
+                    En Pallares Pereira Abogados, contamos con un equipo de abogados altamente cualificados y con amplia experiencia en diversas áreas del derecho. Nuestros profesionales están comprometidos con el estudio continuo y la capacitación para asegurar que estamos siempre al día con los últimos desarrollos legales y judiciales.
+                </p>
+            </section>
+            <section class="mb-6">
+                <h6 class="mx-auto text-xl mb-4 text-green font-medium">
+                    Compromiso con Nuestros Clientes
+                </h6>
+                <p class="indent-8 mb-6 md:mb-0">
+                    Sabemos que enfrentarse a desafíos legales puede ser una experiencia estresante y abrumadora. Por eso, en Pallares Pereira Abogados, nos esforzamos por ofrecer un servicio cercano y accesible, manteniendo una comunicación constante y clara con nuestros clientes. Nos comprometemos a:
+                </p>
+                <div class="ml-12 mb-6 md:mb-0">
+                    <ul class="list-disc mb-6 md:mb-0">
+                        <li>
+                            <p>
+                                Escuchar y entender las necesidades y preocupaciones de nuestros clientes.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Proporcionar asesoría legal clara y comprensible.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Representar a nuestros clientes con pasión y determinación.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="mb-6">
+                <h6 class="mx-auto text-xl mb-4 text-green font-medium">
+                    Por qué elegirnos
+                </h6>
+                <p class="indent-8 mb-6 md:mb-0">
+                    Elegir a Pallares Pereira Abogados significa optar por un bufete que valora la relación con sus clientes y se dedica a obtener los mejores resultados posibles. Nuestro enfoque personalizado y nuestra dedicación a la excelencia legal nos distinguen como líderes en la profesión.
+                </p>
+            </section>
+        </div>
+    </main>
+</Layout>
