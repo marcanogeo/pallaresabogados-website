@@ -1,11 +1,12 @@
 ---
-const {title,text} = Astro.props;
+const {title,text, classes} = Astro.props;
 interface Props{
     title: string;
     text: string;
+    classes: string;
 }
 ---
-<section>
+<section class={classes}>
     <h3 class="container mx-auto p-4">{title}</h3>
     <p class="flex justify-around">
         {text}
