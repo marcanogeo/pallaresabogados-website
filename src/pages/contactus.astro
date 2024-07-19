@@ -1,0 +1,94 @@
+---
+import Banner from '../components/banner.astro';
+import Layout from '../layouts/mainlayout.astro';
+import Contactform from "../components/contactform.astro";
+---
+<Layout title="Inicio">
+    <main>
+        <Banner
+                url='/images/contactus-1.jpg'
+                description="description"
+        />
+        <div class="flex-col justify-around items-center px-12 mx-auto w1/3 md:w1/2">
+            <section class="mb-6">
+                <h6 class="mx-auto text-xl mb-4 text-green font-semibold">Contáctenos</h6>
+                <p class="indent-8 mb-6 md:mb-0">En Pallares Pereira Abogados, estamos comprometidos a proporcionarle la mejor asistencia legal. No dude en ponerse en contacto con nosotros para cualquier consulta o para programar una cita. Estamos aquí para ayudarle.</p>
+            </section>
+            <section class="mb-6">
+                <Contactform/>
+            </section>
+            <section class="mb-6">
+                <p class="mb-6 md:mb-0 font-semibold text-green">Información de Contacto</p>
+                <ul class="list-disc mb-6 md:mb-0 ml-12">
+                    <li>
+                        <p>
+                           <b class="text-green">Dirección:</b>Vigo, Ciudad de Vigo, Galicia, 36201-36393
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="text-green">Teléfono:</b>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="text-green">Correo Elcetrónico:</b> info@pallareabogados.com
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section class="mb-6">
+                <p class="mb-6 md:mb-0 font-semibold text-green">Horarios:</p>
+                <ul class="list-disc mb-6 md:mb-0 ml-12">
+                    <li>
+                        <p>
+                            <b class="text-green">Lunes a viernes:</b> 9:00 AM - 6:00 PM
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="text-green">Sábados:</b> 10:00 AM - 2:00 PM
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b class="text-green">Domingos y Festivos:</b> Cerrado
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section class="mb-6 md:mb-o">
+                <p class="mb-6 md:mb-0 font-semibold text-green">Mapa y Ubicación</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47271.239689455375!2d-8.766711394723083!3d42.22614530647913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f621461b2c193%3A0x7b441dad174bd49f!2sVigo%2C%20Pontevedra!5e0!3m2!1ses!2ses!4v1721388602399!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class="mb-6 md:mb-0">
+                <h6 class="mb-0 font-semibold text-green">Síganos en nuestras redes sociales para mantenerse informado sobre las últimas novedades legales y nuestros servicios: </h6>
+                <ul class="list-none mb-6 md:mb-0 ml-12">
+                    <li>
+                        <p class="flex items-center text-golden justify-center lg:justify-start">
+                      <span class="me-3 [&>svg]:h-5 [&>svg]:w-5">
+                       <svg
+                               fill="currentColor"
+                               viewBox="0 0 448 512"
+                               xmlns="http://www.w3.org/2000/svg">
+
+                          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                          <path
+                                  fill-rule="evenodd"
+                                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                          </path>
+
+                        </svg>
+                      </span>
+                            @pallaresabogado
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <br>
+        <div class="bg-warning-200 text-center">
+            <p class="p-8 md:mb-0 font-medium text-green text-xl text-center">Estamos aquí para ofrecerle el apoyo legal que necesita. Contáctenos hoy mismo y descubra cómo Pallares Pereira Abogados puede ayudarle a resolver sus problemas legales de manera efectiva y profesional. </p>
+        </div>
+    </main>
+</Layout>
