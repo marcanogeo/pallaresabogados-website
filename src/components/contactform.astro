@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <div
@@ -8,99 +9,90 @@
         <img class="rounded-2xl" src="/images/contactus.jpg" alt="contactus" width="500" height="500"/>
     </div>
 
-    <form>
+    <form id="form" action="https://formsubmit.co/georgelysmarcanob@gmail.com" method="POST">
         <!--Name input-->
-        <div class="relative mb-6" data-twe-input-wrapper-init>
-            <input
-                    type="text"
-                    class="peer block min-h-[auto] w-full rounded-2xl border-0 bg-neutral-200 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-                    id="full_name"
-                    placeholder="Nombre y Apellidos" />
-            <label
-                    for="full_name"
-                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-green transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-green peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary"
-            >Nombre:
+        <div class="relative block mb-6">
+            <label>
+                <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-bgreen">
+                    Nombre:
+                </span>
+                <input
+                        type="text"
+                        name="full_name"
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 required:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                        placeholder="Nombre y Apellido"
+                        pattern="[A-Za-z0-9]{5,40}"
+                        maxlength="100"
+                        required
+                />
             </label>
+            <span class="error"></span>
         </div>
 
         <!--Email input-->
-        <div class="relative mb-6" data-twe-input-wrapper-init>
-            <input
-                    type="email"
-                    class="peer block min-h-[auto] w-full rounded-2xl border-0 bg-neutral-200 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-                    id="email"
-                    placeholder="Correo Electrónico" />
-            <label
-                    for="email"
-                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-green transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-green peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary"
-            >Email:
+        <div class="relative block mb-6">
+            <label>
+                <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-bgreen">
+                    Correo Electrónico:
+                </span>
+                <input
+                        type="email"
+                        name="email"
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 required:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                        placeholder="email@example.com"
+                        required
+                        minlength="8"
+                        pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
+                />
             </label>
-        </div>
-
-        <!--Phone input-->
-        <div class="relative mb-6" data-twe-input-wrapper-init>
-            <input
-                    type="tel"
-                    class="peer block min-h-[auto] w-full rounded-2xl bg-neutral-200 border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-                    id="phone"
-                    placeholder="Número de Teléfono" />
-            <label
-                    for="phone"
-                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-green transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-green peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary"
-            >Teléfono:
-            </label>
+            <span class="error"></span>
         </div>
 
         <!--Subject input-->
-        <div class="relative mb-6" data-twe-input-wrapper-init>
-            <input
-                    type="text"
-                    class="peer block min-h-[auto] w-full rounded-2xl bg-neutral-200 border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-                    id="subject"
-                    placeholder="Asunto" />
-            <label
-                    for="subject"
-                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-green transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-green peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary"
-            >Asunto:
+        <div class="relative block mb-6">
+            <label>
+                <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-bgreen">
+                    Asunto:
+                </span>
+                <input
+                        type="text"
+                        name="subject"
+                        class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 required:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                        placeholder="Asunto"
+                        pattern="[a..zA..Z]"
+                        maxlength="40"
+                        required
+                />
             </label>
+            <span class="error"></span>
         </div>
 
         <!--Message textarea-->
-        <div class="relative mb-6" data-twe-input-wrapper-init>
-      <textarea
-              class="peer block min-h-[auto] w-full bg-neutral-200 rounded-2xl border-0 px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-              id="message"
-              rows="3"
-              placeholder="Message"></textarea>
-            <label
-                    for="message"
-                    class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-green transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-green peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary"
-            >Díganos, ¿En qué podemos asesorarle?
+        <div class="relative mb-6">
+            <label for="message" class="after:content-['*'] block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                ¿Díganos en qué podemos asesorarle?
             </label>
-        </div>
-
-        <!--Checkbox-->
-        <div
-                class="mb-6 flex min-h-[1.5rem] items-center justify-center ps-[1.5rem]">
-            <input
-                    class="relative float-left -ms-[1.5rem] me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ms-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent rtl:float-right dark:border-neutral-400 dark:checked:border-primary dark:checked:bg-primary"
-                    type="checkbox"
-                    value=""
-                    id="sendcopy" />
-            <label
-                    class="inline-block ps-[0.15rem] pt-[0.15rem] hover:cursor-pointer"
-                    for="sendcopy">
-                Envíame una copia de este mensaje
-            </label>
+            <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-slate-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 required:border-red-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                    placeholder="Mensaje"
+                    maxlength="255"
+                    required
+            ></textarea>
         </div>
 
         <!--Submit button-->
         <button
                 type="submit"
-                class="inline-block w-full rounded-2xl bg-green px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-light-gold shadow-green-3 transition duration-150 ease-in-out hover:bg-green-accent-300 hover:shadow-green-2 focus:bg-green-accent-300 focus:shadow-green-2 focus:outline-none focus:ring-0 active:bg-green-600 active:shadow-green-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-                data-twe-ripple-init
-                data-twe-ripple-color="light">
+                id="submit"
+                class="inline-block w-full rounded-2xl bg-bgreen px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-light-gold shadow-green-3 transition duration-150 ease-in-out hover:bg-green-accent-300 hover:shadow-green-2 focus:bg-green-accent-300 focus:shadow-green-2 focus:outline-none focus:ring-0 active:bg-green-600 active:shadow-green-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+        >
             Enviar
         </button>
     </form>
 </div>
+<script src="/src/validateform.js">
+
+</script>

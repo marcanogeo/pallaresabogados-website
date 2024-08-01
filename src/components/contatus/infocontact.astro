@@ -1,0 +1,24 @@
+---
+const {info:{title, text1, text2, text3, text4, text5, text6}} = Astro.props;
+---
+
+<section class="mb-6">
+    <p class="mb-6 md:mb-0 font-semibold text-green">{title}</p>
+    <ul class="list-disc mb-6 md:mb-0 ml-12">
+        <li>
+            <p>
+                <b class="text-green">{text1}</b>{text4}
+            </p>
+        </li>
+        <li>
+            <p>
+                <b class="text-green">{text2}</b>{text5}
+            </p>
+        </li>
+        <li>
+            <p>
+                <b class="text-green">{text3}</b> {text6}
+            </p>
+        </li>
+    </ul>
+</section>

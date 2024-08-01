@@ -3,11 +3,13 @@ const withMT = require("@material-tailwind/html/utils/withMT");
 module.exports = withMT( {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
 		"./src/**/*.{html,js}",
-		"./node_modules/tw-elements/js/**/*.js"
+		"./node_modules/tw-elements/js/**/*.js",
+		'./node_modules/flowbite/**/*.js'
 	],
 	plugins: [
 		require('tw-elements/plugin.cjs'),
-		require('@tailwindcss/forms')
+		require('@tailwindcss/forms'),
+		require('flowbite/plugin')
 	],
 	darkMode: "class",
 	theme: {
@@ -23,7 +25,7 @@ module.exports = withMT( {
 			'purple': '#7e5bef',
 			'pink': '#ff49db',
 			'orange': '#ff7849',
-			'green': '#003940',
+			'bgreen': '#003940',
 			'yellow': '#ffc82c',
 			'gray-dark': '#273444',
 			'gray': '#8492a6',

@@ -7,23 +7,23 @@ import Layout from '../layouts/mainlayout.astro';
 import Imground from '../components/imgrounded.astro';
 import Testimonials from '../components/testimonials.astro';
 import Contactform from "../components/contactform.astro";
+import Numcases from '../components/numcases.astro';
 ---
 <Layout title="Inicio">
     <main>
         <Banner
-        url="/images/1.jpg"
-        description="Pallares Abogados"
+            url="/images/1.jpg"
+            description="Pallares Abogados"
         />
         <div class="flex flex-col mx-auto md:w-10/12 sm:p-4 md:p-12">
             <Title
                 text = "Nosotros"
             />
             <div class="flex-col sm:px-2 sm:py-4 mx-auto w-75 shrink">
-                    <Imground  url='/images/2.jpg' text="Nosotros" width={1200} height={920} />
-                    <Art
-                            text="En Pallares Pereira Abogados, contamos con un equipo de abogados altamente cualificados y con amplia experiencia en diversas áreas del derecho. Nuestros profesionales están comprometidos con el estudio continuo y la capacitación para asegurar que estamos siempre al día con los últimos desarrollos legales y judiciales."
-                    />
-
+                <Imground  url='/images/2.jpg' text="Nosotros" width={1200} height={920} />
+                <Art
+                        text="En Pallares Pereira Abogados, contamos con un equipo de abogados altamente cualificados y con amplia experiencia en diversas áreas del derecho. Nuestros profesionales están comprometidos con el estudio continuo y la capacitación para asegurar que estamos siempre al día con los últimos desarrollos legales y judiciales."
+                />
             </div>
             <Title
                 text ="Especialidades"
@@ -43,7 +43,7 @@ import Contactform from "../components/contactform.astro";
                 </div>
             </div>
             <Title
-            text ="Testimonios de Nuestros Clientes"
+                text ="Testimonios de Nuestros Clientes"
             />
             <div class="lg:mb-12"></div>
             <Testimonials />
@@ -52,14 +52,17 @@ import Contactform from "../components/contactform.astro";
                     text="Más de 1000 clientes han confiado en nosotros para resolver sus casos"
             />
             <div class="flex flex-wrap columns-1 lg:columns-2 gap-8 px-4 py-12 lg:p-12 mx-auto text-center shrink">
-                <div class="w-full">
-                    <h1 class="text-golden font-medium text-6xl">1000+</h1>
-                    <p class="text-green text-2xl">Casos Satisfactorios</p>
-                </div>
-                <div class="w-full">
-                    <h1 class="text-golden font-medium text-6xl">50K+</h1>
-                    <p class="text-green text-2xl">Clientes Satisfechos</p>
-                </div>
+                <Numcases
+                post = {{
+                    title:'+1000',
+                    description: 'Casos Satisfactorios',
+                }}
+                />
+               <Numcases post = {{
+                    title: '+50k',
+                    description: 'Clientes Satisfechos',
+                }}
+               />
             </div>
         <!--    Formulario de contacto -->
             <Title
@@ -67,6 +70,5 @@ import Contactform from "../components/contactform.astro";
                 />
             <Contactform/>
         </div>
-
     </main>
 </Layout>
