@@ -35,4 +35,4 @@ $form.addEventListener('submit', function (e){
         nameinput.nextElementSibling.innerText = "";
     }
     return false;
-});
+})
