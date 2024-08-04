@@ -9,9 +9,10 @@ function validateinputs(e, message){
     const field = e.target;
     const inputvalue = e.target.value;
     const emailregex = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}$/;
-    const messageregex = /^[a-z0-9]+@[a-z]{2,3}$/;
-    const usernameregex = /^[a-z0-9]+@[a-z]{2,3}$/;
-    const subjectregex = /^[a-z0-9]+@[a-z]{2,3}$/;
+    console.log(emailregex.test(field.value));
+   // const messageregex = /^[a-z0-9]+@[a-z]{2,3}$/;
+   // const usernameregex = /^[a-z0-9]+@[a-z]{2,3}$/;
+   // const subjectregex = /^[a-z0-9]+@[a-z]{2,3}$/;
     if(inputvalue.length === 0){
         inputvalue.classList.add('invalid');
         inputerror.innerText = message;
