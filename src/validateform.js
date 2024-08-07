@@ -1,5 +1,4 @@
 const userNameField = document.querySelector("[name=full_name]");
-//const passwordField = document.querySelector("[name=password]");
 const emailField = document.querySelector("[name=email]");
 const subjectField = document.querySelector("[name=subject]");
 const messageField = document.querySelector("[name=message]");
@@ -26,13 +25,12 @@ const validateEmptyField = (message, e) => {
         setErrors("", field, false);
     }
 }
-//const emailRegexp = /^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}$/;
 const validateEmailFormat = e => {
     const field = e.target;
     const fieldValue = e.target.value;
     const regex = new RegExp(/^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/);
    // const regex = new RegExp(/^[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}$/);
-    if (fieldValue.trim().length > 5 && !regex.test(fieldValue)) {
+    if (fieldValue.trim().length > 4 && !regex.test(fieldValue)) {
         setErrors("Por favor, ingrese un email válido", field);
     } else {
         setErrors("", field, false);
@@ -41,7 +39,6 @@ const validateEmailFormat = e => {
 
 userNameField.addEventListener("blur", (e) => validateEmptyField("Por favor, ingrese su nombre completo", e));
 subjectField.addEventListener("blur", (e) => validateEmptyField("Indique el tema en el que necesita asesoria de forma breve", e));
-//emailField.addEventListener("blur", (e) => validateEmptyField("Por favor, ingrese su email", e));
 messageField.addEventListener("blur", (e) => validateEmptyField("Explique brevemente la situación o duda a tratar", e));
 
 emailField.addEventListener("input", validateEmailFormat);
