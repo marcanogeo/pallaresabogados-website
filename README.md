@@ -60,6 +60,6 @@ It's fast, flexible, and reliable — with zero-runtime.
 Install tailwindcss, @tailwindcss/postcss, and postcss via npm.
 ```
 
-### 👀 Wnat ti learn more?
+### 👀 Wnat to learn more?
 
 Feel free to check [our documentation](https://tailwindcss.com/docs/styling-with-utility-classes)
