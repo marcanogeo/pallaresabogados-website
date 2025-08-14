@@ -1,8 +1,8 @@
-# Pallares Abogados Website
+# 💻 Pallares Abogados Website
 
 Website providing information about the services, specialties, and history of the Pallares Pereira law firm, which has a team of highly qualified professionals with extensive experience in various areas of law.
 
-# Technologies and tools used
+# ⚙️ Technologies and tools used
 ## Astro Starter Kit: Minimal
 
 ```sh
